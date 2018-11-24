@@ -18,6 +18,12 @@ class TestAdressSearcher(unittest.TestCase):
 
         self.assertEqual("東京都練馬区豊玉南", actual)
 
+    def test_郵便番号がない場合(self):
+        address_searcher = AdressSearcher()
+
+        actual = address_searcher.search
+
+        self.assertEqual("該当する郵便番号は見つかりません", actual)
 
 if __name__ == "__main__":
     unittest.main()
