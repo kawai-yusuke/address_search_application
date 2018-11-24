@@ -21,7 +21,7 @@ class TestAdressSearcher(unittest.TestCase):
     def test_郵便番号がない場合(self):
         address_searcher = AdressSearcher()
 
-        actual = address_searcher.search
+        actual = address_searcher.search(postal_code="1111111")
 
         self.assertEqual("該当する郵便番号は見つかりません", actual)
 
