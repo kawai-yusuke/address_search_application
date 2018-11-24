@@ -4,7 +4,7 @@ import requests
 
 class AdressSearcher():
     def search(self, postal_code):
-        url = "http://zipcloud.ibsnet.co.jp/api/search?zipcode=0287111"
+        url = f"http://zipcloud.ibsnet.co.jp/api/search?zipcode={postal_code}"
         response = requests.get(url)
         response_dict = response.json()
 
