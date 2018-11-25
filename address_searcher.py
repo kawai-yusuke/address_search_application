@@ -11,10 +11,10 @@ class AdressSearcher():
 
         response_dict = response.json()
 
-        if response_dict["results"] == None:
+        if response_dict["results"] is None:
             return "該当する郵便番号は見つかりません"
-        else:
-            都道府県 = response_dict["results"][0]["address1"]
-            市区町村 = response_dict["results"][0]["address2"]
-            町域 = response_dict["results"][0]["address3"]
-            return f"{都道府県}{市区町村}{町域}"
+        # else:
+        都道府県 = response_dict["results"][0]["address1"]
+        市区町村 = response_dict["results"][0]["address2"]
+        町域 = response_dict["results"][0]["address3"]
+        return f"{都道府県}{市区町村}{町域}"
