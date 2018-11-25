@@ -1,5 +1,6 @@
 import requests
 
+
 class AdressSearcher():
     def __init__(self):
         self.base_url = "http://zipcloud.ibsnet.co.jp/api/search"
@@ -11,9 +12,7 @@ class AdressSearcher():
 
         response_dict = response.json()
 
-        if response_dict["results"] == None:
-            return "該当する郵便番号は見つかりません"
-        else:
+        if response_dict["results"] is None:
             都道府県 = response_dict["results"][0]["address1"]
             市区町村 = response_dict["results"][0]["address2"]
             町域 = response_dict["results"][0]["address3"]

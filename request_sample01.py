@@ -1,7 +1,9 @@
 import requests
 
-response = requests.get(url="http://zipcloud.ibsnet.co.jp/api/search?zipcode=0287111")
+response = requests.get(url="http://hachimantai.spartacamp.jp")
 
-data = response.json()
+data = response.json
 
-print(data["results"][0]["address1"])
+# print(data["results"][0]["address1"])
+# print(response)
+print(data)
